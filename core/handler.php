@@ -628,6 +628,10 @@ elseif( isset($_GET['action']) && $_GET['action'] == 'cancel_signing'){
 			$result = mysqli_fetch_array( mysqli_query( $conn,$query ) );
 
 			if ( $result ){
+				$date_query="SELECT cancel_date FROM grubs WHERE GRUB_ID='".$grub_id."'";
+				$cancel_date=mysqli_fetch_assoc(mysqli_query($conn,$date_query));
+				if(strtotime($cancel_date['cancel_date'])>=time())
+				{
 				$query_2 = "DELETE FROM GRUB_SIGNINGS where S_ID = '" . $_SESSION['username'] . "' and GRUB_ID = '" . $grub_id . "'";
 				$result_2 = mysqli_query($conn, $query_2);
 
@@ -635,6 +639,7 @@ elseif( isset($_GET['action']) && $_GET['action'] == 'cancel_signing'){
 					header('location:./../dashboard.php');
 				else
 					header('location:./../dashboard.php?error=1');
+				}else header('location:./../dashboard.php?error=1');
 			}
 			else
 				header('location:./../dashboard.php?error=1');

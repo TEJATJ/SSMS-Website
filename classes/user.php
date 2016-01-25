@@ -128,7 +128,7 @@ class User{
    		?>
 
    		<table class="table table-bordered">
-		   <caption><h4>Grubs Signed<h4></caption>
+		   
 
 		   <thead>
 		      <tr>
@@ -150,9 +150,14 @@ class User{
 				echo "<td>" . $result[0] . "</td>";
 				echo "<td>" . $result[1] . "</td>";
 				echo "<td>" . $result[2] . "</td>";
-				echo "<td>" . $result[3] . "</td>";?>
+				echo "<td>" . $result[3] . "</td>";
+				$date_query="SELECT cancel_date FROM grubs WHERE GRUB_ID='". $result[0]."'";
+				$cancel_date=mysqli_fetch_assoc(mysqli_query($conn,$date_query));
+				if(strtotime($cancel_date['cancel_date'])<=time())
+					echo "<td>Date Exceeded</td>";else {
+				?>
 				<td><a href="<?php echo CORE_URL;?>handler.php?action=cancel_signing&grub_id=<?php echo $result[0]?>" >Cancel Signing</a></td>
-				<?php
+					<?php }
 				echo "</tr>";
 
 				$i++;

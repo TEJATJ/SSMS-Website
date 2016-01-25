@@ -17,8 +17,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="Nikhil" content=""/>
 <script type="text/javascript" src="./../<?php echo INCLUDES_URL; ?>js/jquery-2.1.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="./../<?php echo INCLUDES_URL; ?>css/style.css" />
+
 <link type="text/css" rel="stylesheet" href="./../<?php echo INCLUDES_URL; ?>css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="./../<?php echo INCLUDES_URL; ?>css/style.css" />
 <link rel="shortcut icon" type="image/png" href="./../<?php echo INCLUDES_URL;?>favicon.png"/>
 
 </head>

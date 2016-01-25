@@ -64,8 +64,9 @@ require_once dirname(__FILE__) . './../classes/PHPExcel.php';
 <meta name="Nikhil" content=""/>
 <script type="text/javascript" src="./../<?php echo INCLUDES_URL; ?>js/jquery-2.1.1.min.js"></script>
 <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-<link rel="stylesheet" type="text/css" href="./../<?php echo INCLUDES_URL; ?>css/style.css" />
+
 <link type="text/css" rel="stylesheet" href="./../<?php echo INCLUDES_URL; ?>css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="./../<?php echo INCLUDES_URL; ?>css/style.css" />
 <link rel="stylesheet" type="text/css" href="./../<?php echo INCLUDES_URL; ?>css/jquery.datepick.css">
 <script type="text/javascript" src="./../<?php echo INCLUDES_URL; ?>js/jquery.plugin.js"></script>
 <script type="text/javascript" src="./../<?php echo INCLUDES_URL; ?>js/jquery.datepick.js"></script>
